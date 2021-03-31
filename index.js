@@ -34,6 +34,17 @@ client.connect(err => {
             })
     })
 
+    // Read by id
+    app.get('/book/:id', (req, res) => {
+        const id = req.params.id;
+        bookCollection.find({ _id: ObjectID(id) })
+            .toArray((err, documents) => {
+                res.send(documents[0])
+                console.log(err);
+            })
+
+    })
+
     //Delete
 
 
