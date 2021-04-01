@@ -42,7 +42,6 @@ client.connect(err => {
                 res.send(documents[0])
                 console.log(err);
             })
-
     })
 
     //Delete
