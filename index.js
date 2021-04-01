@@ -51,7 +51,7 @@ client.connect(err => {
         console.log(orderDetails);
         bookOrderCollection.insertOne(orderDetails)
             .then(result => {
-                res.send(result.insertedCount)
+                res.send(result.insertedCount > 0)
             })
 
     })
