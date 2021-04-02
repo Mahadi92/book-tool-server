@@ -10,6 +10,9 @@ const app = express()
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get('/', function (req, res) {
+    res.send('Welcome book-tool server')
+})
 
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.sioj4.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
@@ -77,9 +80,5 @@ client.connect(err => {
 });
 
 
-
-app.get('/', function (req, res) {
-    res.send('hello world')
-})
 app.listen(process.env.PORT || 5000);
 
