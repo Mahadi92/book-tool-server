@@ -4,10 +4,10 @@
 
    
 ## Technology used on Back-end 
- -[x]- MongoDB 
- -[x]- Express
- -[x]- Dotenv
- -[x]- Firebase Auth
+ - [x] MongoDB 
+ - [x] Express
+ - [x] Dotenv
+ - [x] Firebase Auth
 
 ## Site Deploy Method
 * Front-end: Firebase
