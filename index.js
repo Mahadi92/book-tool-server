@@ -68,8 +68,12 @@ client.connect(err => {
     })
 
     //Delete
-
-
+    app.delete('/deleteBook/:id', (req, res) => {
+        const id = req.params.id;
+        console.log("Book deleted", id);
+        bookCollection.findOneAndDelete({ _id: ObjectID(id) })
+            .then((document) => res.send(document.deleteCount > 0))
+    });
 });
 
 
